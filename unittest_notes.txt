@@ -1,0 +1,33 @@
+Python unittest module is used to test a unit of source code. 
+Suppose, you need to test your project. 
+You know what kind of data the function will return. After writing huge code, you need to check it whether the output is correct or not. 
+Normally, what we do is printing the output and match it with the reference output file or check the output manually. 
+To reduce this pain, Python has introduced unittest module. 
+Using this module you can check the output of the function by some simple code.
+
+
+import unittest
+
+# Our code to be tested
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def get_area(self):
+        return self.width * self.height
+
+    def set_width(self, width):
+        self.width = width
+
+    def set_height(self, height):
+        self.height = height
+
+# The test based on unittest module
+class TestGetAreaRectangle(unittest.TestCase):
+    def runTest(self):
+        rectangle = Rectangle(2, 3)
+        self.assertEqual(rectangle.get_area(), 6, "incorrect area")
+
+# run the test
+unittest.main()

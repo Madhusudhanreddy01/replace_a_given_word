@@ -1,0 +1,26 @@
+Python argparse:
+The argparse module makes it easy to write user-friendly command-line interfaces. It parses the defined arguments from the sys.argv.
+
+The argparse module also automatically generates help and usage messages, and issues errors when users give the program invalid arguments.
+
+The argparse is a standard module; we do not need to install it.
+
+A parser is created with ArgumentParser and a new parameter is added with add_argument. Arguments can be optional, required, or positional.
+
+There are four basic steps to using argparse in your code:
+
+import the argparse module;
+create the parser;
+add arguments;
+parse the arguments.
+
+
+import argparse
+
+# Create the parser and add arguments
+parser = argparse.ArgumentParser()
+parser.add_argument(dest='argument1', help="This is the first argument")
+
+# Parse and print the results
+args = parser.parse_args()
+print(args.argument1)
