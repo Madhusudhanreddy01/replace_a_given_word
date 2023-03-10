@@ -1,0 +1,17 @@
+madhusudhanreddy@BAN-LAP-PANNA:~$ ls
+simpleTest.py
+madhusudhanreddy@BAN-LAP-PANNA:~$ touch word.txt
+madhusudhanreddy@BAN-LAP-PANNA:~$ ls
+simpleTest.py  word.txt
+madhusudhanreddy@BAN-LAP-PANNA:~$ vi word.txt
+madhusudhanreddy@BAN-LAP-PANNA:~$ cat word.txt
+madhu is doing a task.
+madhusudhanreddy@BAN-LAP-PANNA:~$ sed -i 's/task/work/g' word.txt
+madhusudhanreddy@BAN-LAP-PANNA:~$ ls
+simpleTest.py  word.txt
+madhusudhanreddy@BAN-LAP-PANNA:~$ cat word.txt
+madhu is doing a work.
+madhusudhanreddy@BAN-LAP-PANNA:~$ sed -i.backup 's/work/project/g' word.txt
+madhusudhanreddy@BAN-LAP-PANNA:~$ ls
+simpleTest.py  word.txt  word.txt.backup
+madhusudhanreddy@BAN-LAP-PANNA:~$
